@@ -1,0 +1,77 @@
+﻿@model IEnumerable<Iconnexz.Models.VendorSidebarModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Item1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item5)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item6)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item7)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item8)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Item1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Item2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Item3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Item4)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Item5)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Item6)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Item7)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Item8)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.SidebarId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.SidebarId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.SidebarId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
